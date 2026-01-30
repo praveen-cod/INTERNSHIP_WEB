@@ -212,8 +212,13 @@ const RegistrationForm = () => {
                 className="file-input"
               />
               <label htmlFor="image" className="file-label">
-                <span className="upload-icon">📁</span>
-                <span>{imageFile ? imageFile.name : 'Choose JPG or PNG'}</span>
+                 <span
+  className="upload-icon"
+  style={{ fontSize: "19px" }}
+>
+  📁
+</span>
+                <span>{imageFile ? imageFile.name : '  Choose JPG or PNG'}</span>
               </label>
             </div>
             {errors.image && <span className="error-text">{errors.image}</span>}
@@ -255,7 +260,7 @@ const RegistrationForm = () => {
                 onClick={getLocation}
                 title="Use current location"
               >
-                🌍 Add Location
+                🌍 Current Location
               </button>
             </div>
           </motion.div>
